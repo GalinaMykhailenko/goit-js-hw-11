@@ -37,12 +37,10 @@ body {
 .form {
   display: flex;
   gap: 8px;
-  margin-top: 36px;
 }
 
 input {
-  width: 272px;
-  height: 40px;
+  width: 252px;
   border: 1px solid #808080;
   border-radius: 4px;
   background: #FFF;
