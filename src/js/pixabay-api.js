@@ -23,6 +23,4 @@ export function searchImage(searchQuery) {
             console.error(`HTTP error! status: ${error.message}`);
             return Promise.reject(new Error(`HTTP error! status: ${error.message}`));
         });
-    
-    
 }

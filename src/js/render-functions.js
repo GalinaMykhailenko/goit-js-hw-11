@@ -8,7 +8,6 @@ export function singleImageTemplate(image) {
                     <p class="info-title">Views: <span class="info-value">${image.views}</span></p>
                     <p class="info-title">Comments: <span class="info-value">${image.comments}</span></p>
                     <p class="info-title">Downloads: <span class="info-value">${image.downloads}</span></p>
-                    <p class="info-title">Alt: <span class="info-value">${image.tags}</span></p>
                 </div>
             </a>
         </li>
