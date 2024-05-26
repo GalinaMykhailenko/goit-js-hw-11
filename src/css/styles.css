@@ -165,3 +165,40 @@ button:hover {
   letter-spacing: 0.04em;
   color: #2e2f42;
 }
+
+
+.loader {
+  display: none;
+  width: 80px;
+  height: 80px;
+  border: 8px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 8px solid #3498db;
+  border-right: 8px solid #f39c12;
+  border-bottom: 8px solid #3498db;
+  border-left: 8px solid #f39c12;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+.alt-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 10px;
+  box-sizing: border-box;
+}

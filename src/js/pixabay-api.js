@@ -10,15 +10,19 @@ export function searchImage(searchQuery) {
     });
 
     const url = `${BASE_URL}${END_POINT}?${params}`;
-
+    
     return fetch(url)
         .then(response => {
             if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
+                console.error(`HTTP error! status: ${response.status}`);
+                return Promise.reject(new Error(`HTTP error! status: ${response.status}`));
             }
             return response.json();
         })
         .catch(error => {
-            throw new Error(`HTTP error! status: ${error.message}`);
+            console.error(`HTTP error! status: ${error.message}`);
+            return Promise.reject(new Error(`HTTP error! status: ${error.message}`));
         });
+    
+    
 }

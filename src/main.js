@@ -24,6 +24,7 @@ formEl.addEventListener("submit", event => {
     }
 
     loader.classList.remove('hidden');
+    loader.classList.add('hidden');
     imagesGallery.innerHTML = '';
 
     searchImage(searchQuery)
@@ -36,7 +37,12 @@ formEl.addEventListener("submit", event => {
             } else {
                 const markup = imageTemplate(data.hits);
                 imagesGallery.innerHTML = markup;
-                new SimpleLightbox('.gallery a').refresh();
+                new SimpleLightbox('.gallery a', {
+                    captionsData: "alt",
+                    captionsDelay: 250
+                }).refresh();
+
+                event.target.elements.searchQuery.value = '';
             }
         })
         .catch(error => {
